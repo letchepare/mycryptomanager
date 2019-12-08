@@ -20,5 +20,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/list-exchanges', 'ExchangeController@index')->name('list-orders');
+Route::get('/list-exchanges', 'ExchangeController@index')->name('list-exchanges');
 
