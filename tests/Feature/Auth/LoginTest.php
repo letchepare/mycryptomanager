@@ -73,7 +73,7 @@ class LoginTest extends TestCase
 
     public function test remember me functionality(){
         $user = factory(User::class)->create([
-            'id' => random int(0,100),
+            'id' => random_int(0,100),
             'password' => bcrypt($password = 'test-login')
         ]);
 
@@ -103,7 +103,7 @@ class LoginTest extends TestCase
             'email' => $user->email,
         ]);
 
-        $token = DB::table('password resets')->first();
+        $token = DB::table('password_resets')->first();
         $this->assertNotNull($token);
 
         Notification::assertSentTo($user, ResetPassword::class, function ($notification, $channels) use ($token) {

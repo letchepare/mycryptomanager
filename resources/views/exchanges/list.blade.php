@@ -7,6 +7,7 @@
     
     <div class="row justify-content-center">
             @if (count($exchanges) > 0)
+            <exchange-list-grid v-bind:exchanges="{{$exchanges}}"></exchange-list-grid>
                 @yield('list-grid')
             @else
             <div class="col-md-10">

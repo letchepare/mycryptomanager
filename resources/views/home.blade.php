@@ -15,6 +15,8 @@
                     @endif
 
                     You are logged in! <br/>
+                    <example-component></example-component>
+
                 </div>
             </div>
         </div>

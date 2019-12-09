@@ -5,8 +5,18 @@
  */
 
 require('./bootstrap');
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faEye } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+
+library.add(faEye)
+
 
 window.Vue = require('vue');
+
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 /**
  * The following block of code may be used to automatically register your
@@ -20,6 +30,7 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('exchange-list-grid', require('./components/ExchangeListGridComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

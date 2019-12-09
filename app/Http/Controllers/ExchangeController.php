@@ -19,7 +19,7 @@ class ExchangeController extends Controller
             $exchanges = \App\Exchange::where("user_id", $id)->get();
 
 //            if(count($exchanges) > 0){
-                return view('exchanges.list-grid',['exchanges' => $exchanges]);
+                return view('exchanges.list',['exchanges' => $exchanges]);
 //            }
 
 

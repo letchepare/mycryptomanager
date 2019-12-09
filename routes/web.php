@@ -22,3 +22,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/list-exchanges', 'ExchangeController@index')->name('list-exchanges');
 
+Route::get('/list-trades/{exchangeId}','TradesController@index');
+
